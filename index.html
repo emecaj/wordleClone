@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <title>Wordle</title>
+	    <meta charset="UTF-8">
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!--jquery-->
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <!--font-awesome-->
+        <script src="https://kit.fontawesome.com/f7fa9dfe7c.js" crossorigin="anonymous"></script>
+        <!--personal files-->
+        <link rel='stylesheet' href='styles.css'>
+        <script src="dictionaries.js"></script>
+        <script src="script.js"></script>
+        <link rel="icon" href="wordle_favicon.png">
+	</head>
+	<body>
+        <br>
+        <!--site header-->
+        <div class="container">
+            </div>
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2"> <h1>Wordle</h1> </div>
+                    <div class="col-md-1 tutorial-key"><i class="fa-solid fa-circle-question"></i></div>
+                </div>
+            </div>
+        </header>
+        <br>
+        <!--word boxes-->
+        <div class="container">
+            <div class="row justify-content-center word">
+                <div class="col-md-1 letter" tabindex="1"> </div>
+                <div class="col-md-1 letter" tabindex="2"> </div>
+                <div class="col-md-1 letter" tabindex="3"> </div>
+                <div class="col-md-1 letter" tabindex="4"> </div>
+                <div class="col-md-1 letter" tabindex="5"> </div>
+            </div>
+            <div class="row justify-content-center word">
+                <div class="col-md-1 letter" tabindex="6"> </div>
+                <div class="col-md-1 letter" tabindex="7"> </div>
+                <div class="col-md-1 letter" tabindex="8"> </div>
+                <div class="col-md-1 letter" tabindex="9"> </div>
+                <div class="col-md-1 letter" tabindex="10"> </div>
+            </div>
+            <div class="row justify-content-center word">
+                <div class="col-md-1 letter" tabindex="11"> </div>
+                <div class="col-md-1 letter" tabindex="12"> </div>
+                <div class="col-md-1 letter" tabindex="13"> </div>
+                <div class="col-md-1 letter" tabindex="14"> </div>
+                <div class="col-md-1 letter" tabindex="15"> </div>
+            </div>
+            <div class="row justify-content-center word">
+                <div class="col-md-1 letter" tabindex="16"> </div>
+                <div class="col-md-1 letter" tabindex="17"> </div>
+                <div class="col-md-1 letter" tabindex="18"> </div>
+                <div class="col-md-1 letter" tabindex="19"> </div>
+                <div class="col-md-1 letter" tabindex="20"> </div>
+            </div>
+            <div class="row justify-content-center word">
+                <div class="col-md-1 letter" tabindex="21"> </div>
+                <div class="col-md-1 letter" tabindex="22"> </div>
+                <div class="col-md-1 letter" tabindex="23"> </div>
+                <div class="col-md-1 letter" tabindex="24"> </div>
+                <div class="col-md-1 letter" tabindex="25"> </div>
+            </div>
+            <div class="row justify-content-center word">
+                <div class="col-md-1 letter" tabindex="26"> </div>
+                <div class="col-md-1 letter" tabindex="27"> </div>
+                <div class="col-md-1 letter" tabindex="28"> </div>
+                <div class="col-md-1 letter" tabindex="29"> </div>
+                <div class="col-md-1 letter" tabindex="30"> </div>
+            </div>
+        </div>
+        <br>
+        <!--keyboard-->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-1 key q">Q</div>
+                <div class="col-md-1 key w">W</div>
+                <div class="col-md-1 key e">E</div>
+                <div class="col-md-1 key r">R</div>
+                <div class="col-md-1 key t">T</div>
+                <div class="col-md-1 key y">Y</div>
+                <div class="col-md-1 key u">U</div>
+                <div class="col-md-1 key i">I</div>
+                <div class="col-md-1 key o">O</div>
+                <div class="col-md-1 key p">P</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-1 key a">A</div>
+                <div class="col-md-1 key s">S</div>
+                <div class="col-md-1 key d">D</div>
+                <div class="col-md-1 key f">F</div>
+                <div class="col-md-1 key g">G</div>
+                <div class="col-md-1 key h">H</div>
+                <div class="col-md-1 key j">J</div>
+                <div class="col-md-1 key k">K</div>
+                <div class="col-md-1 key l">L</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-1 delete-key"><i class="fa-solid fa-delete-left"></i></div>
+                <div class="col-md-1 key z">Z</div>
+                <div class="col-md-1 key x">X</div>
+                <div class="col-md-1 key c">C</div>
+                <div class="col-md-1 key v">V</div>
+                <div class="col-md-1 key b">B</div>
+                <div class="col-md-1 key n">N</div>
+                <div class="col-md-1 key m">M</div>
+                <div class="col-md-1 submit-key"><i class="fa-solid fa-square-check"></i></div>
+            </div>
+        </div>
+        <!-- tutorial -->
+        <div class="modal fade" id="tutorial" tabindex="-1" aria-labelledby="tut" aria-hidden="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title w-100 text-center">&emsp;How to Play</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Can YOU guess the five-letter mystery word?</p>
+                        <p>Press the keys on your screen or use your keyboard to type in a word that you think is the mystery word. When you are ready to submit your guess, press the check mark on the screen or hit 'ENTER' on your keyboard. Only valid words can be submitted!</p> 
+                        </p>
+                        <p>Once your word is submitted, the color of the tiles will change to show you how close you were to guessing the mystery word!</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <br>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1" style="background-color: #538d4e">G</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">R</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">E</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">A</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">T</div>
+                            </div>
+                            <div class="col-md-6" style="text-align: left;">
+                                <span>A green tile means that this letter is in the mystery word and is in the correct spot!</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <br>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">C</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1" style="background-color: #b59f3b">L</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">O</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">S</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">E</div>
+                            </div>
+                            <div class="col-md-6" style="text-align: left;">
+                                <span>A yellow tile means that this letter is in the mystery word but is not in the correct spot.</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <br>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">S</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">O</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">R</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1">R</div>
+                                <div class="col-md-1 tutorialLetter" tabindex="-1" style="background-color: #4c4c4c">Y</div>
+                            </div>
+                            <div class="col-md-6" style="text-align: left;">
+                                <span>A gray tile means that this letter is not anywhere within the mystery word.</span>
+                            </div>
+                        </div>
+                        <br>
+                        <p>You have six tries to guess the word. Good luck!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end screen -->
+        <div class="modal fade" id="endScreen" tabindex="-1" aria-labelledby="endScreen" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title w-100 text-center">
+                            <br>
+                            &emsp;
+                            <div class="col-md-1 endLetter" id="endLetter0" tabindex="-1"></div>
+                            <div class="col-md-1 endLetter" id="endLetter1" tabindex="-1"></div>
+                            <div class="col-md-1 endLetter" id="endLetter2" tabindex="-1"></div>
+                            <div class="col-md-1 endLetter" id="endLetter3" tabindex="-1"></div>
+                            <div class="col-md-1 endLetter" id="endLetter4" tabindex="-1"></div>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 id="score"></h3>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

@@ -1,0 +1,457 @@
+:root {
+    --key-color: #4c4c4c;
+  }
+
+header {
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.letter:before {
+    content: "";
+	float: left;
+	padding-top: 56px;
+}
+
+.letter {
+    position: relative;
+    width: 66px;
+    border-radius: 10px;
+    background-color: #1c1c1c;
+    border: solid 5px black;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 200%;
+    font-weight: 500;
+}
+
+.letter:focus {
+    outline: none;
+    /*
+    animation-name: boxSelected;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /*animation-direction: alternate;
+    */
+}
+
+#error {
+    color: red;
+}
+
+@keyframes boxSelected {
+    0% {  
+        background-color: #2c2c2c;
+    }
+    50% {
+        background-color: #3c3c3c;
+    }
+    100% {
+        background-color: #2c2c2c;
+    }
+}
+
+.key:before {
+    content: "";
+	float: left;
+	padding-top: 45px;
+}
+
+.key {
+    position: relative;
+    width: 60px;
+    border-radius: 10px;
+    background-color: var(--key-color);
+    border: solid 5px black;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 175%;
+    font-weight: 400;
+    /*prevent text selection*/
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.key:hover {
+    filter: brightness(1.5);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.key:active {
+    filter: brightness(2.5);
+    transform: scale(0.9);
+    transition: none;
+    /*-webkit-box-shadow: inset 0px 0px 10px #c1c1c1;
+       -moz-box-shadow: inset 0px 0px 10px #c1c1c1;
+            box-shadow: inset 0px 0px 10px #c1c1c1;*/
+  }
+
+/*
+.key.pressed:active {
+    filter: brightness(3);
+    transform: scale(0.9);
+    transition: none;
+}
+*/
+
+.submit-key:before {
+    content: "";
+	float: left;
+	padding-top: 45px;
+}
+
+.submit-key {
+    position: relative;
+    width: 90px;
+    border-radius: 10px;
+    color: var(--key-color);
+    border: solid 5px black;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 250%;
+    font-weight: 400;
+    /*padding-top: 2px;*/
+}
+
+.submit-key:hover {
+    color: #77dd77;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.submit-key:active {
+    filter: brightness(1.5);
+    transform: scale(0.9);
+    transition: none;
+  }
+
+.delete-key:before {
+    content: "";
+	float: left;
+	padding-top: 45px;
+}
+
+.delete-key {
+    position: relative;
+    width: 90px;
+    border-radius: 10px;
+    color: var(--key-color);
+    border: solid 5px black;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 250%;
+    font-weight: 400;
+    /*padding-top: 2px;*/
+}
+
+.delete-key:hover {
+    color: #ff6961;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.delete-key:active {
+    filter: brightness(1.5);
+    transform: scale(0.9);
+    transition: none;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-content {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+}
+
+.btn-close {
+    color: white;
+}
+
+.tutorialLetter:before {
+    content: "";
+	float: left;
+	padding-top: 36px;
+}
+
+.tutorialLetter {
+    position: relative;
+    width: 40px;
+    border-radius: 10px;
+    background-color: #1c1c1c;
+    border: solid 1px #4c4c4c;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 140%;
+    font-weight: 500;
+}
+
+.tutorial-key:before {
+    content: "";
+	float: left;
+	padding-top: 45px;
+}
+
+.tutorial-key {
+    position: relative;
+    width: 90px;
+    border-radius: 10px;
+    color: var(--key-color);
+    border: solid 5px black;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 250%;
+    font-weight: 400;
+    /*padding-top: 2px;*/
+}
+
+.tutorial-key:hover {
+    filter: brightness(1.5);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.tutorial-key:active {
+    filter: brightness(1.5);
+    transform: scale(0.9);
+    transition: none;
+}
+
+.endLetter:before {
+    content: "";
+	float: left;
+	padding-top: 60px;
+}
+
+.endLetter {
+    position: relative;
+    width: 66px;
+    border-radius: 10px;
+    background-color: #538d4e;
+    border: solid 2px #1c1c1c;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 225%;
+    font-weight: 500;
+}
+
+#endLetter0 {
+    animation-name: randomColors0;
+    animation-duration: 1s;
+}
+
+#endLetter1 {
+    animation-name: randomColors1;
+    animation-duration: 1s;
+}
+
+#endLetter2 {
+    animation-name: randomColors2;
+    animation-duration: 1s;
+}
+
+#endLetter3 {
+    animation-name: randomColors3;
+    animation-duration: 1s;
+}
+
+#endLetter4 {
+    animation-name: randomColors4;
+    animation-duration: 1s;
+}
+
+@keyframes randomColors0 {
+    0% {  
+        background-color: #538d4e;
+    }
+    19.99% {
+        background-color: #538d4e;
+    }
+    20% {
+        background-color: #4c4c4c;
+    }
+    39.99% {
+        background-color: #4c4c4c;
+    }
+    40% {  
+        background-color: #538d4e;
+    }
+    59.99% {
+        background-color: #538d4e;
+    }
+    60% {
+        background-color: #b59f3b;
+    }
+    79.99% {
+        background-color: #b59f3b;
+    }
+    80% {
+        background-color: #4c4c4c;
+    }
+    99.99% {
+        background-color: #4c4c4c;
+    }
+    100% {
+        background-color: #538d4e;
+    }
+}
+
+@keyframes randomColors1 {
+    0% {  
+        background-color: #4c4c4c;
+    }
+    19.99% {
+        background-color: #4c4c4c;
+    }
+    20% {
+        background-color: #b59f3b;
+    }
+    39.99% {
+        background-color: #b59f3b;
+    }
+    40% {  
+        background-color: #4c4c4c;
+    }
+    59.99% {
+        background-color: #4c4c4c;
+    }
+    60% {
+        background-color: #538d4e;
+    }
+    79.99% {
+        background-color: #538d4e;
+    }
+    80% {
+        background-color: #b59f3b;
+    }
+    99.99% {
+        background-color: #b59f3b;
+    }
+    100% {
+        background-color: #538d4e;
+    }
+}
+
+@keyframes randomColors2 {
+    0% {  
+        background-color: #b59f3b;
+    }
+    19.99% {
+        background-color: #b59f3b;
+    }
+    20% {
+        background-color: #4c4c4c;
+    }
+    39.99% {
+        background-color: #4c4c4c;
+    }
+    40% {  
+        background-color: #538d4e;
+    }
+    59.99% {
+        background-color: #538d4e;
+    }
+    60% {
+        background-color: #b59f3b;
+    }
+    79.99% {
+        background-color: #b59f3b;
+    }
+    80% {
+        background-color: #4c4c4c;
+    }
+    99.99% {
+        background-color: #4c4c4c;
+    }
+    100% {
+        background-color: #538d4e;
+    }
+}
+
+@keyframes randomColors3 {
+    0% {  
+        background-color: #4c4c4c;
+    }
+    19.99% {
+        background-color: #4c4c4c;
+    }
+    20% {
+        background-color: #538d4e;
+    }
+    39.99% {
+        background-color: #538d4e;
+    }
+    40% {  
+        background-color: #b59f3b;
+    }
+    59.99% {
+        background-color: #b59f3b;
+    }
+    60% {
+        background-color: #4c4c4c;
+    }
+    79.99% {
+        background-color: #4c4c4c;
+    }
+    80% {
+        background-color: #b59f3b;
+    }
+    99.99% {
+        background-color: #b59f3b;
+    }
+    100% {
+        background-color: #538d4e;
+    }
+}
+
+@keyframes randomColors4 {
+    0% {  
+        background-color: #538d4e;
+    }
+    19.99% {
+        background-color: #538d4e;
+    }
+    20% {
+        background-color: #b59f3b;
+    }
+    39.99% {
+        background-color: #b59f3b;
+    }
+    40% {  
+        background-color: #4c4c4c;
+    }
+    59.99% {
+        background-color: #4c4c4c;
+    }
+    60% {
+        background-color: #b59f3b;
+    }
+    79.99% {
+        background-color: #b59f3b;
+    }
+    80% {
+        background-color: #4c4c4c;
+    }
+    99.99% {
+        background-color: #4c4c4c;
+    }
+    100% {
+        background-color: #538d4e;
+    }
+}
